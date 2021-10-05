@@ -1,0 +1,21 @@
+<h2 class="text-muted">Activos</h2>
+<div class="container-fluid">
+    <ul class="list-group">
+        <li *ngFor="let activo of activos" class="list-group-item">
+            
+            <h3 class="bg-primary"><span class="badge badge-pill badge-dark">{{activo.id}}</span> {{activo.nombre | uppercase}} </h3>
+            <div class="text-muted"><span class="col-sm-3">nombre: </span>{{activo.nombre}}</div>
+            <div class="text-muted"><span class="col-sm-3">descripcion: </span>{{activo.descripcion}}</div>
+            <div class="text-muted"><span class="col-sm-3">tipo: </span>{{activo.tipo}}</div>
+            <div class="text-muted"><span class="col-sm-3">serial: </span>{{activo.serial}}</div>
+            <div class="text-muted"><span class="col-sm-3">noInventario: </span>{{activo.noInventario}}</div>
+            <div class="text-muted"><span class="col-sm-3">peso: </span>{{activo.peso}} kg</div>
+            <div class="text-muted"><span class="col-sm-3">alto: </span>{{activo.alto}} m</div>
+            <div class="text-muted"><span class="col-sm-3">ancho: </span>{{activo.ancho}} m</div>
+            <div class="text-muted"><span class="col-sm-3">valorCompra: </span>${{activo.valorCompra | number:'1.0-5' }}</div>
+            <div class="text-muted"><span class="col-sm-3">fechaCompra: </span>{{activo.fechaCompra | date}}</div>
+        </li>
+    </ul>
+</div>
+
+
