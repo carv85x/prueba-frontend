@@ -1,6 +1,7 @@
 <h2 class="text-muted">Activos</h2>
 <div class="container-fluid">
     <ul class="list-group">
+
         <li *ngFor="let activo of activos" class="list-group-item">
             
             <h3 class="bg-primary"><span class="badge badge-pill badge-dark">{{activo.id}}</span> {{activo.nombre | uppercase}} </h3>
@@ -8,7 +9,7 @@
             <div class="text-muted"><span class="col-sm-3">descripcion: </span>{{activo.descripcion}}</div>
             <div class="text-muted"><span class="col-sm-3">tipo: </span>{{activo.tipo}}</div>
             <div class="text-muted"><span class="col-sm-3">serial: </span>{{activo.serial}}</div>
-            <div class="text-muted"><span class="col-sm-3">noInventario: </span>{{activo.noInventario}}</div>
+            <div *ngIf="activo.inventario !!undefined" class="text-muted"><span class="col-sm-3">noInventario: </span>{{activo.inventario.noInventario}}</div>
             <div class="text-muted"><span class="col-sm-3">peso: </span>{{activo.peso}} kg</div>
             <div class="text-muted"><span class="col-sm-3">alto: </span>{{activo.alto}} m</div>
             <div class="text-muted"><span class="col-sm-3">ancho: </span>{{activo.ancho}} m</div>

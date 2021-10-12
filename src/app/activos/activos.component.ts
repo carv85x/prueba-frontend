@@ -18,7 +18,6 @@ export class ActivosComponent implements OnInit {
 
   getActivos(): void {
     this.service.getActivos().subscribe((response: any) => {
-      console.log("this is " + response);
       this.activos=response;
     },
     error => {
